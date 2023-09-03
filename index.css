@@ -219,9 +219,9 @@ nav {
 
 .col {
     display: flex;
-    justify-content: center;
     margin: 20px;
     width: 100%;
+    justify-content: center;
 }
 
 .card-body {
@@ -259,8 +259,8 @@ nav {
     line-height: 20px;
     cursor: pointer;
     height: auto;
-    text-align: center;
     display: flex;
+    justify-content: center;
 
 }
 
@@ -413,11 +413,12 @@ nav {
     resize: vertical;
     gap: 5px;
     text-align: center;
-    color: var(--gris);
+    color: white;
 }
 
 .form input,
 textarea {
+    color: white;
     border-radius: 10px;
     background-color: var(--gris);
     border-width: 2.5px;
@@ -439,6 +440,10 @@ textarea::placeholder {
     background-color: rgba(178, 121, 167, .5);
     border-radius: 20px;
     margin: 10px;
+}
+
+.contact-form label{
+    color: #fff;
 }
 
 #consulta {
@@ -519,6 +524,7 @@ input[type=submit] {
 
 .product-list {
     width: 100%;
+    justify-content: center;
 }
 
 #registro {
@@ -645,7 +651,7 @@ input[type=submit] {
 
 .button-signup {
     background-color: var(--rosa);
-    color: var(--gris);
+    color: #fff;
 }
 
 .fa-filter {

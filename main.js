@@ -47,7 +47,7 @@ function renderNovedades(arr) {
       let obj = arr[i];
       novContainer.innerHTML +=
         `<div class="col">
-        <div class="card" style="width: 15rem;">
+        <div class="card" style="width: 15rem; justify-content: center;">
           <img src="${obj.cardImg}" class="card-img-top" alt="...">
           <div class="card-body">
             <h6>${obj.category}</h6>
@@ -72,12 +72,13 @@ function renderNovedades(arr) {
 //FUNCIÓN PARA RENDERIZAR todos los objetos del array en la sección "Productos" 
 function renderProd(arr) {
   if (prodContainer !== null) {
-    prodContainer.innerHTML = `""`; //Agrego esta linea porque, de otro modo, el array con productos filtrados se renderiza añadiéndose (y no reemplazando) a lo anteriormente renderizado. Además, por algún motivo que no logro encontrar, tanto la función para crear array con filtros vigentes como la función para crear nuevo array de productos con dichos filtros, se ejecuta 2 veces (duplicadamente), primero, con el estado anterior, y luego, con el nuevo estado del array (Ver consola para comprender mejor)
+    prodContainer.innerHTML = ``; //Agrego esta linea porque, de otro modo, el array con productos filtrados se renderiza añadiéndose (y no reemplazando) a lo anteriormente renderizado. Además, por algún motivo que no logro encontrar, tanto la función para crear array con filtros vigentes como la función para crear nuevo array de productos con dichos filtros, se ejecuta 2 veces (duplicadamente), primero, con el estado anterior, y luego, con el nuevo estado del array (Ver consola para comprender mejor)
     for (let i = 0; i < arr.length; i++) {
       let obj = arr[i];
       prodContainer.innerHTML +=
-        `<div class="col">
-        <div class="card" style="width: 15rem;">
+        `
+        <div class="col" style ="justify-content: center;">
+        <div class="card" style="width: 15rem; justify-content: center;">
           <img src="${obj.cardImg}" class="card-img-top" alt="...">
           <div class="card-body">
             <h6>${obj.category}</h6>
@@ -136,19 +137,19 @@ const renderCartProduct = (product) => {
     img,
     quantity
   } = product;
-  return `<div class="added-product-card">
+  return `<div class="added-product-card style="color:#fff";" >
   <img src="${img}" class="added-img" alt="...">
-  <div class="added-card-body">
-    <div class="added-container1">
-    <h4 class="added-card-title">${name}</h4>
-    <div><i id="trash-icon" data-id='${id}' class="fa-regular fa-trash-can cart-container-icon"></i></div>
+  <div class="added-card-body" style="color:#fff";>
+    <div class="added-container1" style= "flex-wrap: wrap";>
+    <h4 class="added-card-title" style="color:#fff";>${name}</h4>
+    <div style="color:#fff";><i id="trash-icon" data-id='${id}' class="fa-regular fa-trash-can cart-container-icon"></i></div>
     </div>
-    <div class="added-container1">
+    <div class="added-container1" style= "flex-wrap: wrap";>
     <div>
-    <h7>${type}</h7>
-    <p class="card-text">$${cost}*${quantity}= $${cost*quantity}</p>
+    <h7 style="color:#fff";>${type}</h7>
+    <p class="card-text" style="color:#fff";>$${cost}*${quantity}= $${cost*quantity}</p>
     </div>
-    <div class="cart-item-count">
+    <div class="cart-item-count" style="color:#fff";>
     <i id="minusIcon" class="fa-regular fa-square-minus cart-container-icon" data-id='${id}'></i>
     <h4 id="quantity-txt">${quantity}</h4>
     <i id="plusIcon" class="fa-regular fa-square-plus cart-container-icon" data-id='${id}'></i>
@@ -291,7 +292,7 @@ function displayTotal() {
     cart.map(function (obj) {
       count = count + (obj.cost * obj.quantity);
       cartBtn.innerHTML = `<h2>Total = $${count}</h2>
-  <button type="button" class="boton-productos" href="./productos"><a class="boton-enlace" href="./">COMPRAR</a></button>`;
+  <button type="button" id="whatsapp-button" class="boton-productos" href="./productos"><a class="boton-enlace" href="./">COMPRAR</a></button>`;
     })
   }
 }
@@ -342,6 +343,37 @@ function atLeastOneFilterChecked(arr, e) {
   }
 }
 
+// Función para generar el mensaje a enviar
+function generarMensaje() {
+  let mensaje = "¡Hola! Estos son los productos que tengo en mi carrito de compra:\n\n";
+
+  cart.forEach((product, index) => {
+    mensaje += `${index + 1}. ${product.name}\nCantidad: ${product.quantity}\nPrecio por unidad: $${product.cost}\n\n`;
+  });
+
+  mensaje += `Total: $${calcularTotal()}`;
+
+  return encodeURIComponent(mensaje);
+}
+
+function calcularTotal() {
+  let total = 0;
+  cart.forEach((product) => {
+    total += product.cost * product.quantity;
+  });
+  return total;
+}
+
+// Función para abrir WhatsApp con el mensaje predefinido
+function abrirWhatsApp() {
+  const mensaje = generarMensaje();
+  const urlWhatsApp = `https://wa.me/+543548554840text=${mensaje}`;
+  window.open(urlWhatsApp);
+}
+
+
+// Agregar un evento de clic al botón
+
 
 
 //FUNCIÓN INICIALIZADORA
@@ -358,7 +390,9 @@ function init() {
   document.body.addEventListener('click', filterCheckboxes);
   displayTotal();
   renderCart();
-}
+  const whatsappButton = document.getElementById("whatsapp-button");
+  whatsappButton.addEventListener("click", abrirWhatsApp);
 
+}
 
 init();
