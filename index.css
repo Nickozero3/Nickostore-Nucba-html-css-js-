@@ -247,7 +247,7 @@ nav {
 }
 
 .boton-productos {
-    color: var(--gris);
+    color: #fff;
     background-color: var(--violeta);
     border-color: var(--gris);
     font-weight: 500;
