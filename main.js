@@ -346,13 +346,10 @@ function atLeastOneFilterChecked(arr, e) {
 // Función para generar el mensaje a enviar
 function generarMensaje() {
   let mensaje = "¡Hola! Estos son los productos que tengo en mi carrito de compra:\n\n";
-
   cart.forEach((product, index) => {
     mensaje += `${index + 1}. ${product.name}\nCantidad: ${product.quantity}\nPrecio por unidad: $${product.cost}\n\n`;
   });
-
   mensaje += `Total: $${calcularTotal()}`;
-
   return encodeURIComponent(mensaje);
 }
 
@@ -366,15 +363,11 @@ function calcularTotal() {
 
 // Función para abrir WhatsApp con el mensaje predefinido
 function abrirWhatsApp() {
+  const tuNumeroTelefono = "+543548554840"; // Reemplaza con tu número de teléfono real en formato internacional
   const mensaje = generarMensaje();
-  const urlWhatsApp = `https://wa.me/+543548554840text=${mensaje}`;
+  const urlWhatsApp = `https://wa.me/${tuNumeroTelefono}/?text=${mensaje}`;
   window.open(urlWhatsApp);
 }
-
-
-// Agregar un evento de clic al botón
-
-
 
 //FUNCIÓN INICIALIZADORA
 function init() {
@@ -390,9 +383,10 @@ function init() {
   document.body.addEventListener('click', filterCheckboxes);
   displayTotal();
   renderCart();
+
+  // Agregar evento de clic al botón "whatsapp-button"
   const whatsappButton = document.getElementById("whatsapp-button");
   whatsappButton.addEventListener("click", abrirWhatsApp);
+};
 
-}
-
-init();
+init(); // Llama a la función inicializadora
