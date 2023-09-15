@@ -343,6 +343,14 @@ function atLeastOneFilterChecked(arr, e) {
   }
 }
 
+
+function calcularTotal() {
+  let total = 0;
+  cart.forEach((product) => {
+    total += product.cost * product.quantity;
+  });
+  return total;
+}
 // Función para generar el mensaje a enviar
 function generarMensaje() {
   let mensaje = "¡Hola! Estos son los productos que tengo en mi carrito de compra:\n\n";
@@ -353,19 +361,12 @@ function generarMensaje() {
   return encodeURIComponent(mensaje);
 }
 
-function calcularTotal() {
-  let total = 0;
-  cart.forEach((product) => {
-    total += product.cost * product.quantity;
-  });
-  return total;
-}
 
 // Función para abrir WhatsApp con el mensaje predefinido
 function abrirWhatsApp() {
   const tuNumeroTelefono = "+543548554840"; // Reemplaza con tu número de teléfono real en formato internacional
   const mensaje = generarMensaje();
-  const urlWhatsApp = `https://wa.me/${tuNumeroTelefono}/?text=${mensaje}`;
+  const urlWhatsApp = `https://wa.me/+543548554840?text=${mensaje}`;
   window.open(urlWhatsApp);
 }
 
