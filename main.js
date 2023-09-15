@@ -292,7 +292,7 @@ function displayTotal() {
     cart.map(function (obj) {
       count = count + (obj.cost * obj.quantity);
       cartBtn.innerHTML = `<h2>Total = $${count}</h2>
-  <button type="button" id="whatsapp-button" class="boton-productos" href="./productos"><a class="boton-enlace" href="./">COMPRAR</a></button>`;
+  <button type="button" id="whatsapp-button" class="boton-productos" href="./productos"> <a id="whatsapp-button" class="boton-enlace" href="./">COMPRAR</a></button>`;
     })
   }
 }
