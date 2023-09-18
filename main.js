@@ -25,7 +25,6 @@ const adultosMayores = document.getElementById("adultos-mayores");
 const adultos = document.getElementById("adultos");
 const adolescentes = document.getElementById("adolescentes");
 const niños = document.getElementById("ninios");
-
 const Diamantes = document.getElementById("Especiales");
 const Especiales = document.getElementById("Diamantes");
 
@@ -287,12 +286,13 @@ function countAddedProducts() {
 //Si hay productos en el carrito, comienza un contador en 0 al que se le suma el costo de cada producto, multiplicado por la cantidad de veces
 //que dicho producto se haya agregado al carrito.
 function displayTotal() {
+  
   if (cart.length > 0) {
     let count = 0;
     cart.map(function (obj) {
       count = count + (obj.cost * obj.quantity);
       cartBtn.innerHTML = `<h2>Total = $${count}</h2>
-  <button type="button" id="whatsapp-button" class="boton-productos" href="./productos"> <a id="whatsapp-button" class="boton-enlace" href="./">COMPRAR</a></button>`;
+  <button type="button" id="whatsapp-button" class="boton-productos" href="#"> <a class="boton-enlace" id="boton-enlace" href="#">COMPRAR</a></button>`;
     })
   }
 }
@@ -352,21 +352,22 @@ function calcularTotal() {
   return total;
 }
 // Función para generar el mensaje a enviar
+
 function generarMensaje() {
-  let mensaje = "¡Hola! Estos son los productos que tengo en mi carrito de compra:\n\n";
+  let mensaje = "¡Hola! Quiero comprar esto:\n\n";
   cart.forEach((product, index) => {
-    mensaje += `${index + 1}. ${product.name}\nCantidad: ${product.quantity}\nPrecio por unidad: $${product.cost}\n\n`;
+    mensaje += ` ${product.quantity} de ${product.name}\n \nque tiene $${product.cost} de Precio por unidad: \n\n`;
   });
-  mensaje += `Total: $${calcularTotal()}`;
+  mensaje += ` sumando un Total: $${calcularTotal()} para pagar..`;
   return encodeURIComponent(mensaje);
 }
 
 
 // Función para abrir WhatsApp con el mensaje predefinido
 function abrirWhatsApp() {
-  const tuNumeroTelefono = "+543548554840"; // Reemplaza con tu número de teléfono real en formato internacional
   const mensaje = generarMensaje();
-  const urlWhatsApp = `https://wa.me/+543548554840?text=${mensaje}`;
+  const numeroWhatsApp = "+543548554840"; // Reemplaza esto con tu número de WhatsApp
+  const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
   window.open(urlWhatsApp);
 }
 
@@ -384,10 +385,14 @@ function init() {
   document.body.addEventListener('click', filterCheckboxes);
   displayTotal();
   renderCart();
-
-  // Agregar evento de clic al botón "whatsapp-button"
+  const whatsappButton2 = document.getElementById("boton-enlace");
   const whatsappButton = document.getElementById("whatsapp-button");
-  whatsappButton.addEventListener("click", abrirWhatsApp);
+  whatsappButton.addEventListener("click",abrirWhatsApp)
+  whatsappButton2.addEventListener("click",abrirWhatsApp)
+  // document.body.addEventListener("click",abrirWhatsApp)  esta linea comprueba que el mensaje si se genera pero ACA hace se sea en cualquier click en la pagina
+  // Agregar evento de clic al botón "whatsapp-button"
+  
+ // document.whatsappButton.addEventListener("click", abrirWhatsApp);
 };
 
 init(); // Llama a la función inicializadora
