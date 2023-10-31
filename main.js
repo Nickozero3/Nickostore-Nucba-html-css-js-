@@ -106,7 +106,9 @@ const renderCart = () => {
   if (!cart.length) {
     cartTxt.innerHTML = `<h2>Carrito (0)</h2> 
     <p>No hay productos en el carrito.</p>`;
-    cartBtn.innerHTML = `<button type="button" class="boton-productos" href=""><a class="boton-enlace" href="./productos.html">Ver productos</a></button>`
+    cartBtn.innerHTML = `
+    <button type="button" class="boton-productos" href="">
+    <a class="boton-enlace" href="./productos.html">Ver productos</a></button>`
     bubbleNumber();
     return;
   }
@@ -286,14 +288,19 @@ function countAddedProducts() {
 //Si hay productos en el carrito, comienza un contador en 0 al que se le suma el costo de cada producto, multiplicado por la cantidad de veces
 //que dicho producto se haya agregado al carrito.
 function displayTotal() {
-  
+
   if (cart.length > 0) {
     let count = 0;
     cart.map(function (obj) {
       count = count + (obj.cost * obj.quantity);
-      cartBtn.innerHTML = `<h2>Total = $${count}</h2>
-  <button type="button" id="whatsapp-button" class="boton-productos" href="#"> <a class="boton-enlace" id="boton-enlace" href="#">COMPRAR</a></button>`;
+      cartBtn.innerHTML = `
+      <h2>Total = $${count}</h2>
+      <button type="button" id="whatsapp-button" class="boton-productos" href="#"> 
+      <a class="boton-enlace" id="boton-enlace" href="#">COMPRAR</a></button>`;
     })
+    cartBtn.onclick = () => {
+      abrirWhatsApp();
+    }
   }
 }
 
@@ -354,12 +361,13 @@ function calcularTotal() {
 // Función para generar el mensaje a enviar
 
 function generarMensaje() {
-  let mensaje = "¡Hola! Quiero comprar esto:\n\n";
+  let mensaje = "¡Hola! Quiero comprar esto:\n"; // Agregar salto de línea
   cart.forEach((product, index) => {
-    mensaje += ` ${product.quantity} de ${product.name}\n \nque tiene $${product.cost} de Precio por unidad: \n\n`;
+    mensaje += `${product.quantity} Cargas de ${product.name} ( Unidad: $${product.cost} ) \n`; // Agregar salto de línea después de cada producto
   });
-  mensaje += ` sumando un Total: $${calcularTotal()} para pagar..`;
+  mensaje += `Sumando un Total: $${calcularTotal()} para pagar..`;
   return encodeURIComponent(mensaje);
+
 }
 
 
@@ -387,12 +395,12 @@ function init() {
   renderCart();
   const whatsappButton2 = document.getElementById("boton-enlace");
   const whatsappButton = document.getElementById("whatsapp-button");
-  whatsappButton.addEventListener("click",abrirWhatsApp)
-  whatsappButton2.addEventListener("click",abrirWhatsApp)
+  whatsappButton.addEventListener("click", abrirWhatsApp)
+  whatsappButton2.addEventListener("click", abrirWhatsApp)
   // document.body.addEventListener("click",abrirWhatsApp)  esta linea comprueba que el mensaje si se genera pero ACA hace se sea en cualquier click en la pagina
   // Agregar evento de clic al botón "whatsapp-button"
-  
- // document.whatsappButton.addEventListener("click", abrirWhatsApp);
+
+  // document.whatsappButton.addEventListener("click", abrirWhatsApp);
 };
 
 init(); // Llama a la función inicializadora
