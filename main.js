@@ -301,7 +301,6 @@ function abrirWhatsApp() {
   window.open(urlWhatsApp);
 }
 
-
 //FUNCIÓN QUE RENDERIZA EL COSTO TOTAL DE LOS PRODUCTOS AÑADIDOS AL CARRITO Y EL BOTÓN "COMPRAR".
 //Si hay productos en el carrito, comienza un contador en 0 al que se le suma el costo de cada producto, multiplicado por la cantidad de veces
 //que dicho producto se haya agregado al carrito.
