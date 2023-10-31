@@ -29,8 +29,6 @@ const Diamantes = document.getElementById("Especiales");
 const Especiales = document.getElementById("Diamantes");
 
 
-
-
 // FUNCIÓN FLECHA QUE ALMACENA EN LOCAL STORAGE UN ARRAY DE OBJETOS (PARA CARRITO)
 let saveLocalStorage = (cartList) => {
   localStorage.setItem("cart", JSON.stringify(cartList));
@@ -284,6 +282,26 @@ function countAddedProducts() {
   return count;
 }
 
+
+// Función para generar el mensaje a enviar
+function generarMensaje() {
+  let mensaje = "¡Hola! Quiero comprar esto:\n"; // Agregar salto de línea
+  cart.forEach((product, index) => {
+    mensaje += `${product.quantity} Cargas de ${product.name} ( Unidad: $${product.cost} ) \n`; // Agregar salto de línea después de cada producto
+  });
+  mensaje += `Sumando un Total: $${calcularTotal()} para pagar..`;
+  return encodeURIComponent(mensaje);
+}
+
+// Función para abrir WhatsApp con el mensaje predefinido
+function abrirWhatsApp() {
+  const mensaje = generarMensaje();
+  const numeroWhatsApp = "+543548554840"; // Reemplaza esto con tu número de WhatsApp
+  const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+  window.open(urlWhatsApp);
+}
+
+
 //FUNCIÓN QUE RENDERIZA EL COSTO TOTAL DE LOS PRODUCTOS AÑADIDOS AL CARRITO Y EL BOTÓN "COMPRAR".
 //Si hay productos en el carrito, comienza un contador en 0 al que se le suma el costo de cada producto, multiplicado por la cantidad de veces
 //que dicho producto se haya agregado al carrito.
@@ -350,33 +368,12 @@ function atLeastOneFilterChecked(arr, e) {
   }
 }
 
-
 function calcularTotal() {
   let total = 0;
   cart.forEach((product) => {
     total += product.cost * product.quantity;
   });
   return total;
-}
-// Función para generar el mensaje a enviar
-
-function generarMensaje() {
-  let mensaje = "¡Hola! Quiero comprar esto:\n"; // Agregar salto de línea
-  cart.forEach((product, index) => {
-    mensaje += `${product.quantity} Cargas de ${product.name} ( Unidad: $${product.cost} ) \n`; // Agregar salto de línea después de cada producto
-  });
-  mensaje += `Sumando un Total: $${calcularTotal()} para pagar..`;
-  return encodeURIComponent(mensaje);
-
-}
-
-
-// Función para abrir WhatsApp con el mensaje predefinido
-function abrirWhatsApp() {
-  const mensaje = generarMensaje();
-  const numeroWhatsApp = "+543548554840"; // Reemplaza esto con tu número de WhatsApp
-  const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
-  window.open(urlWhatsApp);
 }
 
 //FUNCIÓN INICIALIZADORA
