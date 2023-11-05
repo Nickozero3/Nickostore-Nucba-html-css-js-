@@ -21,13 +21,14 @@ const novContainer = document.querySelector(".novedades-container");
 const prodContainer = document.querySelector(".prod-container");
 const cartBubble = document.querySelector(".cart-bubble");
 const todos = document.getElementById("todos");
-const adultosMayores = document.getElementById("adultos-mayores");
-const adultos = document.getElementById("adultos");
-const adolescentes = document.getElementById("adolescentes");
-const niños = document.getElementById("ninios");
-const Diamantes = document.getElementById("Especiales");
-const Especiales = document.getElementById("Diamantes");
+// const adultosMayores = document.getElementById("adultos-mayores");
+// const adultos = document.getElementById("adultos");
+// const adolescentes = document.getElementById("adolescentes");
+// Free Fire
 
+const FreeFire = document.getElementById("FreeFire"); 
+const Especiales = document.getElementById("Especiales");
+const Fortnite = document.getElementById("Fortnite");
 
 // FUNCIÓN FLECHA QUE ALMACENA EN LOCAL STORAGE UN ARRAY DE OBJETOS (PARA CARRITO)
 let saveLocalStorage = (cartList) => {
@@ -44,7 +45,7 @@ function renderNovedades(arr) {
       let obj = arr[i];
       novContainer.innerHTML +=
         `<div class="col">
-        <div class="card" style="width: 15rem; justify-content: center;">
+        <div class="card" style="width: 14rem; justify-content: center;">
           <img src="${obj.cardImg}" class="card-img-top" alt="...">
           <div class="card-body">
             <h6>${obj.category}</h6>
@@ -75,7 +76,7 @@ function renderProd(arr) {
       prodContainer.innerHTML +=
         `
         <div class="col" style ="justify-content: center;">
-        <div class="card" style="width: 15rem; justify-content: center;">
+        <div class="card" style="width: 17rem; justify-content: center;">
           <img src="${obj.cardImg}" class="card-img-top" alt="...">
           <div class="card-body">
             <h6>${obj.category}</h6>
@@ -355,10 +356,13 @@ function atLeastOneFilterChecked(arr, e) {
     } else {
       if (e.target.classList.contains('btn-filtro')) {
         if (!(e.target.classList.contains("btn-f-no-todos"))) {
-          adultosMayores.checked = false;
-          adultos.checked = false;
-          adolescentes.checked = false;
-          niños.checked = false;
+          // adultosMayores.checked = false;
+          // adultos.checked = false;
+          // adolescentes.checked = false;
+          // niños.checked = false;
+          Fortnite.checked = false;
+          Especiales.checked = false;
+          FreeFire.checked = false;
         } else {
           todos.checked = false;
         }
@@ -393,10 +397,6 @@ function init() {
   const whatsappButton = document.getElementById("whatsapp-button");
   whatsappButton.addEventListener("click", abrirWhatsApp)
   whatsappButton2.addEventListener("click", abrirWhatsApp)
-  // document.body.addEventListener("click",abrirWhatsApp)  esta linea comprueba que el mensaje si se genera pero ACA hace se sea en cualquier click en la pagina
-  // Agregar evento de clic al botón "whatsapp-button"
-
-  // document.whatsappButton.addEventListener("click", abrirWhatsApp);
 };
 
 init(); // Llama a la función inicializadora

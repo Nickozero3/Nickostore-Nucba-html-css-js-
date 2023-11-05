@@ -219,12 +219,13 @@ nav {
 
 .col {
     display: flex;
-    margin: 20px;
-    width: 100%;
+    width: auto;
     justify-content: center;
+    
 }
 
 .card-body {
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -244,6 +245,9 @@ nav {
 
 .card {
     height: auto;
+}
+.card-img-top {
+    max-height: 400px;
 }
 
 .boton-productos {
@@ -277,9 +281,10 @@ nav {
 }
 
 .prod-container {
-    display: flex;
+    display: inline-flex;
     height: auto;
     width: 100%;
+    justify-content: center;
 }
 
 #nosotros {

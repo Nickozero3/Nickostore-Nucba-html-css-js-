@@ -3,63 +3,122 @@ export let productsData = [
   {
     id: 1,
     name: "100 + 10 Diamantes",
-    category: "Diamantes",
+    category: "FreeFire",
     type: "Contenido Digital",
     cost: 1560,
     cardImg: "../img/100.png",
-    ageRange: "Diamantes",
+    ageRange: "FreeFire",
   },
   {
     id: 2,
     name: "310 + 31 Diamantes",
-    category: "Diamantes",
+    category: "FreeFire",
     type: "Contenido Digital",
     cost: 4570,
     cardImg: "../img/310.png",
-    ageRange: "Diamantes"
+    ageRange: "FreeFire"
   },
   {
     id: 3,
     name: "520 + 52 Diamantes",
-    category: "Diamantes",
+    category: "FreeFire",
     type: "Contenido Digital",
     cost: 7452,
     cardImg: "../img/520.png",
-    ageRange: "Diamantes"
+    ageRange: "FreeFire"
   },
   {
     id: 4,
     name: "1060 + 106 Diamantes",
-    category: "Diamantes",
+    category: "FreeFire",
     type: "Contenido Digital",
     cost: 14550,
     cardImg: "../img/1060.png",
-    ageRange: "Diamantes"
+    ageRange: "FreeFire"
   },
   {
     id: 5,
     name: "2180 +218 Diamantes",
-    category: "Diamantes",
+    category: "FreeFire",
     type: "Contenido Digital",
     cost: 28363,
     cardImg: "../img/2180.png",
-    ageRange: "Diamantes"
+    ageRange: "FreeFire"
   },{
     id: 6,
     name: "5600 + 560 Diamantes",
-    category: "Diamantes",
+    category: "FreeFire",
     type: "Contenido Digital",
     cost: 69000,
     cardImg: "../img/5600.png",
-    ageRange: "Diamantes"
+    ageRange: "FreeFire"
   },
   {
     id: 7,
-    name: "ENSEÑANZA",
+    name: "Enseñanza de Cargas",
     category: "TEORICO",
     type: "Contenido Digital",
     cost: 37500,
     cardImg: "../img/pdf.png",
     ageRange: "Especiales"
+  },
+  {
+    id: 8,
+    name: "1000 Pavos",
+    category: "Fortnite",
+    type: "Contenido Digital",
+    cost: 1080,
+    cardImg: "../img/1000.png",
+    ageRange: "Fortnite"
+  }
+  ,
+  {
+    id: 9,
+    name: "2800 Pavos",
+    category: "Fortnite",
+    type: "Contenido Digital",
+    cost: 2600,
+    cardImg: "../img/2800.png",
+    ageRange: "Fortnite"
+  }
+  ,
+  {
+    id: 10,
+    name: "5000 Pavos",
+    category: "Fortnite",
+    type: "Contenido Digital",
+    cost: 4100,
+    cardImg: "../img/5000.png",
+    ageRange: "Fortnite"
+  }
+  ,
+  {
+    id: 11,
+    name: "13500 Pavos",
+    category: "Fortnite",
+    type: "Contenido Digital",
+    cost: 10000,
+    cardImg: "../img/13500.png",
+    ageRange: "Fortnite"
+  }
+  ,
+  {
+    id: 12,
+    name: "Fortnite Crew",
+    category: "Fortnite",
+    type: "Contenido Digital",
+    cost: 1700,
+    cardImg: "../img/crew.png",
+    ageRange: "Fortnite"
+  }
+  ,
+  {
+    id: 13,
+    name: "Pase de nivel (REGALO)",
+    category: "Fortnite",
+    type: "Contenido Digital",
+    cost: 1050,
+    cardImg: "../img/pase.png",
+    ageRange: "Fortnite"
   }
 ]
