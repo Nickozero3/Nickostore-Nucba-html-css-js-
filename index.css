@@ -13,7 +13,9 @@
     font-family: 'Roboto Slab', serif;
     color: black;
 }
-
+.preguntas{
+    color: white;
+}
 html,
 body {
     overflow-x: hidden;
