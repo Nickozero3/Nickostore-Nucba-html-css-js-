@@ -199,9 +199,14 @@ nav {
     width: 250px;
 }
 
-.carrousel-title {
-    color: var(--gris);
-    text-shadow: 1px 1px 2px var(--violeta), 0 0 1em var(--rosa), 0 0 0.2em var(--violeta);
+.carrousel-title{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 1em var(--rosa), 0 0 0.2em black;
+}
+
+.carrousel-inside {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 1em var(--rosa), 0 0 0.2em black;
 }
 
 #novedades {
