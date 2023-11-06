@@ -19,6 +19,9 @@ body {
     overflow-x: hidden;
 }
 
+.preguntas{
+    color: white;
+}
 a:link {
     color: white;
     text-decoration: none;
