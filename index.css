@@ -11,7 +11,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Roboto Slab', serif;
-    color: white;
+    color: black;
 }
 
 html,
@@ -19,12 +19,6 @@ body {
     overflow-x: hidden;
 }
 
-.novedades-section{
-    color: black;
-}
-.cards-sections{
-    color: #000;
-}
 
 a:link {
     color: white;
