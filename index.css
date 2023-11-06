@@ -702,7 +702,7 @@ input[type=submit] {
 }
 
 #cuerpo-acordeon a {
-    color: #B8E1FF;
+    color: red;
 }
 
 #boton-account:hover {
