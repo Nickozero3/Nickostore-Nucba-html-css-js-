@@ -19,12 +19,10 @@ body {
     overflow-x: hidden;
 }
 
-
 a:link {
     color: white;
     text-decoration: none;
 }
-
 
 p {
     font-size: 18px;
