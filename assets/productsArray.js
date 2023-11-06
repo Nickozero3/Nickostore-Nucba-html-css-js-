@@ -66,9 +66,9 @@ export let productsData = [
     id: 8,
     name: "1000 Pavos",
     category: "Fortnite",
-    type: "Contenido Digital",
+    type: "Carga",
     cost: 1080,
-    cardImg: "../img/1000.png",
+    cardImg: "../img/1000.jpg",
     ageRange: "Fortnite"
   }
   ,
@@ -76,9 +76,9 @@ export let productsData = [
     id: 9,
     name: "2800 Pavos",
     category: "Fortnite",
-    type: "Contenido Digital",
+    type: "Carga",
     cost: 2600,
-    cardImg: "../img/2800.png",
+    cardImg: "../img/2800.jpg",
     ageRange: "Fortnite"
   }
   ,
@@ -86,9 +86,9 @@ export let productsData = [
     id: 10,
     name: "5000 Pavos",
     category: "Fortnite",
-    type: "Contenido Digital",
+    type: "Carga",
     cost: 4100,
-    cardImg: "../img/5000.png",
+    cardImg: "../img/5000.jpg",
     ageRange: "Fortnite"
   }
   ,
@@ -96,9 +96,9 @@ export let productsData = [
     id: 11,
     name: "13500 Pavos",
     category: "Fortnite",
-    type: "Contenido Digital",
+    type: "Carga",
     cost: 10000,
-    cardImg: "../img/13500.png",
+    cardImg: "../img/13500.jpg",
     ageRange: "Fortnite"
   }
   ,
@@ -106,7 +106,7 @@ export let productsData = [
     id: 12,
     name: "Fortnite Crew",
     category: "Fortnite",
-    type: "Contenido Digital",
+    type: "Suscripcion Mensual",
     cost: 1700,
     cardImg: "../img/crew.png",
     ageRange: "Fortnite"
@@ -116,7 +116,7 @@ export let productsData = [
     id: 13,
     name: "Pase de nivel (REGALO)",
     category: "Fortnite",
-    type: "Contenido Digital",
+    type: "Pase de Temporada",
     cost: 1050,
     cardImg: "../img/pase.png",
     ageRange: "Fortnite"
