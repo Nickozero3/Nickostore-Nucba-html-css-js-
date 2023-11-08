@@ -115,6 +115,9 @@ const renderCart = () => {
   cartTxt.innerHTML = `<h2>Carrito (${count})</h2>` + cart.map(renderCartProduct).join("");
   bubbleNumber();
   displayTotal();
+  cartBtn.onclick = () => {
+    abrirWhatsApp();
+  }
 };
 
 //FUNCIÓN QUE CREA UN ARRAY CON LAS CATEGORÍAS APLICADAS PARA EL FILTRO.
@@ -316,9 +319,6 @@ function displayTotal() {
       <button type="button" id="whatsapp-button" class="boton-productos" href="#"> 
       <a class="boton-enlace" id="boton-enlace" href="#">COMPRAR</a></button>`;
     })
-    cartBtn.onclick = () => {
-      abrirWhatsApp();
-    }
   }
 }
 
