@@ -115,9 +115,7 @@ const renderCart = () => {
   cartTxt.innerHTML = `<h2>Carrito (${count})</h2>` + cart.map(renderCartProduct).join("");
   bubbleNumber();
   displayTotal();
-  cartBtn.onclick = () => {
-    abrirWhatsApp();
-  }
+  
 };
 
 //FUNCIÓN QUE CREA UN ARRAY CON LAS CATEGORÍAS APLICADAS PARA EL FILTRO.
@@ -309,7 +307,6 @@ function abrirWhatsApp() {
 //Si hay productos en el carrito, comienza un contador en 0 al que se le suma el costo de cada producto, multiplicado por la cantidad de veces
 //que dicho producto se haya agregado al carrito.
 function displayTotal() {
-
   if (cart.length > 0) {
     let count = 0;
     cart.map(function (obj) {
@@ -318,6 +315,9 @@ function displayTotal() {
       <h2>Total = $${count}</h2>
       <button type="button" id="whatsapp-button" class="boton-productos" href="#"> 
       <a class="boton-enlace" id="boton-enlace" href="#">COMPRAR</a></button>`;
+      cartBtn.onclick = () => {
+        abrirWhatsApp();
+      }
     })
   }
 }
