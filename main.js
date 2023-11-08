@@ -313,7 +313,7 @@ function displayTotal() {
       count = count + (obj.cost * obj.quantity);
       cartBtn.innerHTML = `
       <h2>Total = $${count}</h2>
-      <button type="button" id="whatsapp-button" class="boton-productos" href="#"> 
+      <button type="button" id="whatsapp-button" class="boton-productos" href="#" style= "color:Black";> 
       <a class="boton-enlace" id="boton-enlace" href="#">COMPRAR</a></button>`;
       cartBtn.onclick = () => {
         abrirWhatsApp();
