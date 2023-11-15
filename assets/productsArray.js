@@ -121,4 +121,14 @@ export let productsData = [
     cardImg: "../img/pase.png",
     ageRange: "Fortnite"
   }
+  ,
+  {
+    id: 14,
+    name: "450 Robux",
+    category: "Roblox",
+    type: "Carga",
+    cost: 1050,
+    cardImg: "../img/450robux.png",
+    ageRange: "Roblox"
+  }
 ]
