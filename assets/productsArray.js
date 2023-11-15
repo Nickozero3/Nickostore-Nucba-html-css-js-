@@ -127,7 +127,7 @@ export let productsData = [
     name: "450 Robux",
     category: "Roblox",
     type: "Carga",
-    cost: 1050,
+    cost: 2500,
     cardImg: "../img/450robux.png",
     ageRange: "Roblox"
   }
