@@ -198,7 +198,7 @@ export let productsData = [
     category: "MobileLegends",
     type: "Carga",
     cost: 24120,
-    cardImg: "../img/450robux.png",
+    cardImg: "../img/2500diamantes.png",
     ageRange: "MobileLegends"
   },
   {
@@ -207,7 +207,7 @@ export let productsData = [
     category: "MobileLegends",
     type: "Carga",
     cost: 47260,
-    cardImg: "../img/450robux.png",
+    cardImg: "../img/5000diamantes.png",
     ageRange: "MobileLegends"
   },
   {
@@ -216,7 +216,7 @@ export let productsData = [
     category: "MobileLegends",
     type: "Suscripcion",
     cost: 1090,
-    cardImg: "../img/450robux.png",
+    cardImg: "../img/semanal.png",
     ageRange: "MobileLegends"
   },
   {
