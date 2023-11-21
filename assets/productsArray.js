@@ -1,5 +1,6 @@
 
 export let productsData = [
+  // FreeFire
   {
     id: 1,
     name: "100 + 10 Diamantes",
@@ -53,6 +54,7 @@ export let productsData = [
     cardImg: "../img/5600.png",
     ageRange: "FreeFire"
   },
+  // Especiales
   {
     id: 7,
     name: "Enseñanza de Cargas",
@@ -62,6 +64,7 @@ export let productsData = [
     cardImg: "../img/pdf.png",
     ageRange: "Especiales"
   },
+  // Fortnite
   {
     id: 8,
     name: "1000 Pavos",
@@ -122,6 +125,7 @@ export let productsData = [
     ageRange: "Fortnite"
   }
   ,
+  // Roblox
   {
     id: 14,
     name: "450 Robux",
@@ -130,5 +134,98 @@ export let productsData = [
     cost: 2500,
     cardImg: "../img/450robux.png",
     ageRange: "Roblox"
+    
+  },
+
+  // Mobile Legends Bang Bang
+  {
+    id: 15,
+    name: "50 + 5 Diamantes",
+    category: "MobileLegends",
+    type: "Carga",
+    cost: 550,
+    cardImg: "../img/50diamantes.png",
+    ageRange: "MobileLegends"
+  },
+  {
+    id: 16,
+    name: "150 + 15 Diamantes",
+    category: "MobileLegends",
+    type: "Carga",
+    cost: 1610,
+    cardImg: "../img/150diamantes.png",
+    ageRange: "MobileLegends"
+  },
+  {
+    id: 17,
+    name: "250 + 25 Diamantes",
+    category: "MobileLegends",
+    type: "Carga",
+    cost: 2620,
+    cardImg: "../img/250diamantes.png",
+    ageRange: "MobileLegends"
+  },
+  {
+    id: 18,
+    name: "500 + 65 Diamantes",
+    category: "MobileLegends",
+    type: "Carga",
+    cost: 5330,
+    cardImg: "../img/500diamantes.png",
+    ageRange: "MobileLegends"
+  },
+  {
+    id: 19,
+    name: "1000 + 155 Diamantes",
+    category: "MobileLegends",
+    type: "Carga",
+    cost: 10450,
+    cardImg: "../img/1000diamantes.png",
+    ageRange: "MobileLegends"
+  },
+  {
+    id: 20,
+    name: "1500 + 265 Diamantes",
+    category: "MobileLegends",
+    type: "Carga",
+    cost: 14760,
+    cardImg: "../img/1500diamantes.png",
+    ageRange: "MobileLegends"
+  },
+  {
+    id: 21,
+    name: "2500 + 475 Diamantes",
+    category: "MobileLegends",
+    type: "Carga",
+    cost: 24120,
+    cardImg: "../img/450robux.png",
+    ageRange: "MobileLegends"
+  },
+  {
+    id: 22,
+    name: "5000 + 1000 Diamantes",
+    category: "MobileLegends",
+    type: "Carga",
+    cost: 47260,
+    cardImg: "../img/450robux.png",
+    ageRange: "MobileLegends"
+  },
+  {
+    id: 23,
+    name: "Pase Semanal Diamantes",
+    category: "MobileLegends",
+    type: "Suscripcion",
+    cost: 1090,
+    cardImg: "../img/450robux.png",
+    ageRange: "MobileLegends"
+  },
+  {
+    id: 24,
+    name: "Pase Twilight",
+    category: "MobileLegends",
+    type: "Suscripcion",
+    cost: 5430,
+    cardImg: "../img/twilight.png",
+    ageRange: "MobileLegends"
   }
 ]
