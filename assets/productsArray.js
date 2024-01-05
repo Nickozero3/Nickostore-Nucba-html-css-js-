@@ -6,7 +6,7 @@ export let productsData = [
     name: "100 + 10 Diamantes",
     category: "FreeFire",
     type: "Carga",
-    cost: 1450,
+    cost: 1700,
     cardImg: "../img/100.png",
     ageRange: "FreeFire",
   },
@@ -15,7 +15,7 @@ export let productsData = [
     name: "310 + 31 Diamantes",
     category: "FreeFire",
     type: "Carga",
-    cost: 4350,
+    cost: 5100,
     cardImg: "../img/310.png",
     ageRange: "FreeFire"
   },
@@ -24,7 +24,7 @@ export let productsData = [
     name: "520 + 52 Diamantes",
     category: "FreeFire",
     type: "Carga",
-    cost: 6850,
+    cost: 8300,
     cardImg: "../img/520.png",
     ageRange: "FreeFire"
   },
@@ -33,7 +33,7 @@ export let productsData = [
     name: "1060 + 106 Diamantes",
     category: "FreeFire",
     type: "Carga",
-    cost: 13450,
+    cost: 16200,
     cardImg: "../img/1060.png",
     ageRange: "FreeFire"
   },
@@ -42,7 +42,7 @@ export let productsData = [
     name: "2180 +218 Diamantes",
     category: "FreeFire",
     type: "Carga",
-    cost: 25150,
+    cost: 32700,
     cardImg: "../img/2180.png",
     ageRange: "FreeFire"
   },{
@@ -50,7 +50,7 @@ export let productsData = [
     name: "5600 + 560 Diamantes",
     category: "FreeFire",
     type: "Carga",
-    cost: 63500,
+    cost: 77100,
     cardImg: "../img/5600.png",
     ageRange: "FreeFire"
   },
@@ -63,67 +63,68 @@ export let productsData = [
     cost: 37500,
     cardImg: "../img/pdf.png",
     ageRange: "Especiales"
-  },
-  // Fortnite
-  {
-    id: 8,
-    name: "1000 Pavos",
-    category: "Fortnite",
-    type: "Carga",
-    cost: 1485,
-    cardImg: "../img/1000.jpg",
-    ageRange: "Fortnite"
   }
-  ,
-  {
-    id: 9,
-    name: "2800 Pavos",
-    category: "Fortnite",
-    type: "Carga",
-    cost: 3650,
-    cardImg: "../img/2800.jpg",
-    ageRange: "Fortnite"
-  }
-  ,
-  {
-    id: 10,
-    name: "5000 Pavos",
-    category: "Fortnite",
-    type: "Carga",
-    cost: 5650,
-    cardImg: "../img/5000.jpg",
-    ageRange: "Fortnite"
-  }
-  ,
-  {
-    id: 11,
-    name: "13500 Pavos",
-    category: "Fortnite",
-    type: "Carga",
-    cost: 13670,
-    cardImg: "../img/13500.jpg",
-    ageRange: "Fortnite"
-  }
-  ,
-  {
-    id: 12,
-    name: "Fortnite Crew",
-    category: "Fortnite",
-    type: "Suscripcion Mensual",
-    cost: 2260,
-    cardImg: "../img/crew.png",
-    ageRange: "Fortnite"
-  }
-  ,
-  {
-    id: 13,
-    name: "Pase de nivel (REGALO)",
-    category: "Fortnite",
-    type: "Pase de Temporada",
-    cost: 1430,
-    cardImg: "../img/pase.png",
-    ageRange: "Fortnite"
-  }
+  //,
+  // // Fortnite
+  // {
+  //   id: 8,
+  //   name: "1000 Pavos",
+  //   category: "Fortnite",
+  //   type: "Carga",
+  //   cost: 1485,
+  //   cardImg: "../img/1000.jpg",
+  //   ageRange: "Fortnite"
+  // }
+  // ,
+  // {
+  //   id: 9,
+  //   name: "2800 Pavos",
+  //   category: "Fortnite",
+  //   type: "Carga",
+  //   cost: 3650,
+  //   cardImg: "../img/2800.jpg",
+  //   ageRange: "Fortnite"
+  // }
+  // ,
+  // {
+  //   id: 10,
+  //   name: "5000 Pavos",
+  //   category: "Fortnite",
+  //   type: "Carga",
+  //   cost: 5650,
+  //   cardImg: "../img/5000.jpg",
+  //   ageRange: "Fortnite"
+  // }
+  // ,
+  // {
+  //   id: 11,
+  //   name: "13500 Pavos",
+  //   category: "Fortnite",
+  //   type: "Carga",
+  //   cost: 13670,
+  //   cardImg: "../img/13500.jpg",
+  //   ageRange: "Fortnite"
+  // }
+  // ,
+  // {
+  //   id: 12,
+  //   name: "Fortnite Crew",
+  //   category: "Fortnite",
+  //   type: "Suscripcion Mensual",
+  //   cost: 2260,
+  //   cardImg: "../img/crew.png",
+  //   ageRange: "Fortnite"
+  // }
+  // ,
+  // {
+  //   id: 13,
+  //   name: "Pase de nivel (REGALO)",
+  //   category: "Fortnite",
+  //   type: "Pase de Temporada",
+  //   cost: 1430,
+  //   cardImg: "../img/pase.png",
+  //   ageRange: "Fortnite"
+  // }
   ,
   // Roblox
   {
@@ -131,7 +132,7 @@ export let productsData = [
     name: "450 Robux",
     category: "Roblox",
     type: "Carga",
-    cost: 2500,
+    cost: "2500",
     cardImg: "../img/450robux.png",
     ageRange: "Roblox"
     
