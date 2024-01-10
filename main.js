@@ -393,10 +393,8 @@ function init() {
   document.body.addEventListener('click', filterCheckboxes);
   displayTotal();
   renderCart();
-  const whatsappButton2 = document.getElementById("boton-enlace");
-  const whatsappButton = document.getElementById("whatsapp-button");
+  const whatsappButton = document.getElementById("boton-enlace");
   whatsappButton.addEventListener("click", abrirWhatsApp)
-  whatsappButton2.addEventListener("click", abrirWhatsApp)
 };
 
 init(); // Llama a la función inicializadora
