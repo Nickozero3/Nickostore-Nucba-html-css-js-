@@ -20,7 +20,7 @@ body {
 }
 
 a:link {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -333,7 +333,7 @@ nav {
 
 .nosotros-txt,
 .nosotros-txt li {
-    color: var(--gris);
+    color: cyan;
     text-shadow: 1px 1px 2px var(--violeta), 0 0 1em var(--rosa), 0 0 0.2em var(--violeta);
 
 }
@@ -650,7 +650,6 @@ input[type=submit] {
 .account-txt {
     margin-bottom: 6vh;
     color: white;
-    text-shadow: 1px 1px 2px var(--violeta), 0 0 1em var(--rosa), 0 0 0.2em var(--violeta);
     text-align: center;
 }
 
@@ -754,7 +753,6 @@ input[type=submit] {
     z-index: 100;
     margin-right: 20px;
     border: none;
-    background: rgba(235, 235, 235, 0.95);
     cursor: pointer;
     font-size: 28px;
     color: #4C184E;
