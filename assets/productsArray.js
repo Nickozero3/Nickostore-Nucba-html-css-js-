@@ -6,7 +6,7 @@ export let productsData = [
     name: "100 + 10 Diamantes",
     category: "FreeFire",
     type: "Carga",
-    cost: 1700,
+    cost: 2000,
     cardImg: "../img/100.png",
     ageRange: "FreeFire",
   },
@@ -15,7 +15,7 @@ export let productsData = [
     name: "310 + 31 Diamantes",
     category: "FreeFire",
     type: "Carga",
-    cost: 5100,
+    cost: 5800,
     cardImg: "../img/310.png",
     ageRange: "FreeFire"
   },
@@ -24,7 +24,7 @@ export let productsData = [
     name: "520 + 52 Diamantes",
     category: "FreeFire",
     type: "Carga",
-    cost: 8300,
+    cost: 9170,
     cardImg: "../img/520.png",
     ageRange: "FreeFire"
   },
@@ -33,7 +33,7 @@ export let productsData = [
     name: "1060 + 106 Diamantes",
     category: "FreeFire",
     type: "Carga",
-    cost: 16200,
+    cost: 17900,
     cardImg: "../img/1060.png",
     ageRange: "FreeFire"
   },
@@ -42,7 +42,7 @@ export let productsData = [
     name: "2180 +218 Diamantes",
     category: "FreeFire",
     type: "Carga",
-    cost: 32700,
+    cost: 34900,
     cardImg: "../img/2180.png",
     ageRange: "FreeFire"
   },{
@@ -50,7 +50,7 @@ export let productsData = [
     name: "5600 + 560 Diamantes",
     category: "FreeFire",
     type: "Carga",
-    cost: 77100,
+    cost: 84300,
     cardImg: "../img/5600.png",
     ageRange: "FreeFire"
   },
